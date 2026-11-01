@@ -104,3 +104,10 @@ Get-FileHash -Algorithm SHA256 .\italy.pmtiles
 
 Compare the result with the matching line. A file that does not match was damaged in transfer; ask for
 it again instead of importing it.
+
+## Licences installed with the application
+
+The installation carries every third-party notice and licence text in its `licenses` folder, and
+`Settings → Licences → Open the licence folder` opens it. The map, place and routing files you import
+keep their own licences — the Open Database License 1.0, CDLA-Permissive-2.0 and Apache-2.0 — and are
+not covered by the application licence. See [Third-party notices](../THIRD-PARTY-NOTICES.md).

@@ -1,0 +1,162 @@
+Undaergo — third-party notices for the installed application
+============================================================
+
+This file accompanies the installed Undaergo application and records every third-party
+component it contains, with its copyright notice and the licence file that carries the
+terms. The licence texts are the other files in this folder.
+
+The application itself is proprietary: see the LICENCE file shipped with the product.
+
+
+1. Application bundle
+---------------------
+
+  Electron 44.10.1                          MIT        Copyright (c) Electron contributors;
+                                                       Copyright (c) 2013-2020 GitHub Inc.
+                                                       Own notice: LICENSE.electron.txt in the
+                                                       application folder.
+  Chromium (as bundled with Electron)       BSD-3 and  Copyright The Chromium Project and
+                                            others     contributors. Own notice:
+                                                       LICENSES.chromium.html in the
+                                                       application folder.
+  Node.js (as bundled with Electron)        MIT        Copyright Node.js contributors.
+  React, React DOM 19.3.0                   MIT        Copyright (c) Meta Platforms, Inc. and
+                                                       affiliates.
+  Zustand 5.0.15                            MIT        Copyright (c) 2019 Paul Henschel.
+  TanStack Query 5.102.8                    MIT        Copyright (c) 2021-present Tanner Linsley.
+  MapLibre GL JS 6.9.0                      BSD-3      Copyright (c) 2023, MapLibre contributors.
+  PMTiles 4.5.0                             BSD-3      Copyright 2021 Protomaps LLC.
+  Lucide React 1.46.0                       ISC        Copyright (c) 2026 Lucide Icons and
+                                                       Contributors.
+  SQLite (via Node.js)                      Public     D. Richard Hipp and contributors.
+                                            domain
+
+  Licence files: LICENSE-MIT.txt, LICENSE-BSD-3-Clause.txt, LICENSE-ISC.txt.
+
+
+2. Map data inside the application
+----------------------------------
+
+Two files derived from OpenStreetMap are compiled into the application and are read every
+time the map draws, so they are distributed with it under the Open Database License 1.0:
+
+  rail-overview.geo.json     the railway network at low zoom, extracted from the label and
+                             road layers of a Protomaps build of OpenStreetMap.
+  admin-labels.geo.json      region and province label points, extracted from OpenStreetMap
+                             through the Overpass API (admin_level 4 and 6 within Italy).
+
+  Copyright (c) OpenStreetMap contributors,
+  https://www.openstreetmap.org/copyright
+  Licence: LICENSE-ODbL-1.0.txt
+
+The map displays "© OpenStreetMap contributors" in its credit line.
+
+
+3. Place data inside the application
+------------------------------------
+
+  italy-outline.geo.json     the national outline used to clip the place dataset, derived
+                             from the Overture Maps divisions theme, release 2026-08-19.0,
+                             simplified to 0.002 degrees.
+
+  Copyright (c) Overture Maps Foundation, https://overturemaps.org
+  Licence: LICENSE-CDLA-Permissive-2.0.txt
+
+The place dataset itself, which the operator imports separately, is described in
+NOTICE-places.txt and is not part of the installer.
+
+
+4. Map style, glyphs and sprites
+--------------------------------
+
+The map style is written for this application against the Protomaps vector-tile schema. Its
+visual design follows OpenFreeMap's Liberty style, itself derived from OSM Liberty and OSM
+Bright: style code BSD-3, design CC BY 4.0, OSM Bright design CC BY 3.0. Copyright (c)
+Zsolt Ero, Mapbox, OpenMapTiles and the respective contributors. The style is a port of that
+look, not a copy of the upstream style document.
+
+  https://github.com/hyperknot/openfreemap-styles
+  https://github.com/maputnik/osm-liberty
+  https://creativecommons.org/licenses/by/4.0/
+
+The label glyphs in resources/map/fonts are derived from Noto Sans Regular and Medium:
+Copyright 2022 The Noto Project Authors, SIL Open Font License 1.1. The licence travels
+beside them as resources/map/fonts/OFL.txt.
+
+The sprite sheet in resources/map/sprites is rendered from Lucide icons, ISC, as listed in
+section 1.
+
+
+5. Routing engine and its libraries
+-----------------------------------
+
+The Valhalla routing engine (version 3.9.0) is distributed as the programs in
+resources/routing/bin and the shared libraries in resources/routing/lib. Valhalla itself is
+MIT: Copyright (c) 2018 Valhalla contributors; Copyright (c) 2015-2017 Mapillary AB, Mapzen.
+Licence file: LICENSE-Valhalla-MIT.txt.
+
+The libraries it loads are third-party works, each under its own licence:
+
+  Library (file stem)         Project            Licence                    Upstream
+  --------------------------  -----------------  -------------------------  --------------------------
+  abseil_dll                  Abseil             Apache-2.0                 github.com/abseil/abseil-cpp
+  freexl                      FreeXL             MPL-1.1 / GPL-2.0+ /       gaia-gis.it/fossil/freexl
+                                                 LGPL-2.1+ (LGPL-2.1 used)
+  geos                        GEOS               LGPL-2.1                   libgeos.org
+  geos_c                      GEOS C API         LGPL-2.1                   libgeos.org
+  geotiff                     libgeotiff         MIT                        github.com/OSGeo/libgeotiff
+  iconv                       GNU libiconv       LGPL-2.1                   gnu.org/software/libiconv
+  jpeg62                      libjpeg (IJG)      IJG                        ijg.org
+  libcrypto-3-x64             OpenSSL            Apache-2.0                 openssl.org
+  libcurl                     curl               curl (MIT-like)            curl.se/docs/copyright.html
+  libczmq                     CZMQ               MPL-2.0                    github.com/zeromq/czmq
+  libexpat                    Expat              MIT                        libexpat.github.io
+  liblzma                     XZ Utils           Public domain (0BSD)       tukaani.org/xz
+  libprotobuf-lite            Protocol Buffers   BSD-3                      github.com/protocolbuffers/protobuf
+  libxml2                     libxml2            MIT                        gitlab.gnome.org/GNOME/libxml2
+  libzmq-mt-4_3_5             ZeroMQ             MPL-2.0                    github.com/zeromq/libzmq
+  lua51                       Lua 5.1            MIT                        lua.org
+  lz4                         LZ4                BSD-2                      github.com/lz4/lz4
+  minizip                     minizip            zlib                       github.com/zlib-ng/minizip-ng
+  msvcp140, msvcp140_1        MS Visual C++      Microsoft Visual Studio    visualstudio.microsoft.com/
+                              Runtime            licence terms              license-terms
+  prime_server                prime_server       BSD-3                      github.com/valhalla/prime_server
+  proj_9                      PROJ               MIT / X11                  proj.org
+  spatialite                  SpatiaLite         MPL-1.1 / GPL-2.0+ /       gaia-gis.it/fossil/libspatialite
+                                                 LGPL-2.0+ (LGPL-2.1 used)
+  sqlite3                     SQLite             Public domain              sqlite.org
+  tiff                        libtiff            libtiff (BSD-like)         gitlab.com/libtiff/libtiff
+  zlib1                       zlib               zlib                       zlib.net
+
+  Licence files: LICENSE-Apache-2.0.txt, LICENSE-LGPL-2.1.txt, LICENSE-MPL-2.0.txt,
+  LICENSE-MIT.txt, LICENSE-BSD-3-Clause.txt, LICENSE-BSD-2-Clause.txt, LICENSE-ZLIB.txt,
+  LICENSE-IJG.txt.
+
+"This software is based in part on the work of the Independent JPEG Group."
+
+Source code of the LGPL- and MPL-covered libraries. Each of those libraries is loaded from
+resources/routing/lib as a separate dynamic library that the operator can replace with a
+compatible build; the application performs no integrity check on it, so the relinking the
+LGPL requires is a file replacement. The corresponding source for the version bundled with
+Valhalla 3.9.0 is available from the upstream project at the address above, and this notice
+is a written offer — valid for three years from the date you received this copy — to supply
+that source on request from the address in the LICENCE file shipped with the product. The
+full text of the GNU Lesser General Public License 2.1 is in LICENSE-LGPL-2.1.txt.
+
+
+6. Attribution displayed by the application
+-------------------------------------------
+
+  Places data © Overture Maps Foundation (overturemaps.org) — CDLA-Permissive-2.0 / Apache-2.0
+  © OpenStreetMap contributors
+  MapLibre
+
+The three lines above are drawn on the map itself and are never collapsed behind a control.
+
+
+7. Keeping this file true
+-------------------------
+
+Replacing a dataset changes NOTICE-places.txt or NOTICE-routing.txt, not this file. Adding,
+removing or upgrading a bundled library, a renderer dependency or a derived map file
+changes this file in the same change.

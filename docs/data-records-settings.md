@@ -78,6 +78,14 @@ cancelled, and the panel can be closed while it continues. Reopen `Data` to see 
 
 The panel states the file where the preference is stored.
 
+### Licences
+
+`Settings` also carries a `Licences` section. `Open the licence folder` opens the directory installed
+beside the application, which holds every third-party notice and licence text: the software the
+application is built on, the libraries the routing engine loads, the map's glyphs and icons, and the
+map, place and routing datasets. `NOTICE-bundle.txt` in that folder names each component and where its
+terms are. See [Third-party notices](../THIRD-PARTY-NOTICES.md).
+
 ## Where your data lives
 
 Everything the operator owns is under `%APPDATA%\Undaergo`:

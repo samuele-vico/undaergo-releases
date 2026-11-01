@@ -84,6 +84,10 @@ Zustand, TanStack Query, MapLibre GL JS, PMTiles, Lucide icons, the Valhalla rou
 bundled shared libraries, SQLite and the Noto Sans font. The map style follows the visual design of
 OpenFreeMap's Liberty style. Each remains governed by its own licence and copyright notices, which are
 set out in `THIRD-PARTY-NOTICES.md` and in the `licenses/` directory. Where a third-party licence grants
+
+A copy of that directory is installed beside the Application and can be opened from its `Settings`
+view, so the notices reach you with the binary and not only through this repository.
+`licenses/NOTICE-bundle.txt` names every component and the licence file that carries its terms. Where a third-party licence grants
 you broader rights than this licence, that licence prevails for the component it covers. Nothing in
 this licence grants you rights to a third-party trademark.
 

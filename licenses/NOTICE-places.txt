@@ -1,0 +1,93 @@
+Undaergo — place data NOTICE
+============================
+
+The place file distributed beside the installer, `poi-overture.sqlite`, is built from the
+Overture Maps Foundation "places" theme. The operator imports it from the Data panel; it is
+not inside the installer.
+
+  1. Source: Overture Maps Foundation, theme `places`, type `place`, release 2026-08-19.0.
+  2. Extract: Italy, bounding box 6.6,35.4,18.6,47.1, clipped to the Overture divisions
+     polygon for Italy simplified to 0.002 degrees.
+  3. Built 2026-09-23; format version 2, schema version 1, 116 categories.
+  4. Rows: 817,662.
+
+Overture data is made available under the Community Data License Agreement – Permissive,
+Version 2.0 ("CDLA-Permissive-2.0"), except where an individual contributing source is
+published under a different licence. The full text of every applicable licence accompanies
+this notice:
+
+  LICENSE-CDLA-Permissive-2.0.txt   Community Data License Agreement - Permissive, v2.0
+  LICENSE-Apache-2.0.txt            Apache License, Version 2.0
+
+Apache-2.0 applies to the Foursquare contributions. Apache-2.0, Section 4(d), requires that
+this NOTICE be retained and made available; it is, beside the data in the delivery folder and
+in the application's source repository. CC0-1.0 applies to the AllThePlaces contributions and
+requires no notice; it is listed so that the set of licences is complete rather than because
+of an obligation.
+
+The Overture places theme contains no OpenStreetMap data and therefore carries none of the
+share-alike obligations of the Open Database License (ODbL). This matters for a reader of the
+application's credits, because Undaergo DOES display OpenStreetMap data — the map archive and
+the routing network are OSM-derived and are credited separately as
+"© OpenStreetMap contributors". The two are independent obligations.
+
+
+Licences of the contributing sources
+------------------------------------
+
+A single place record may cite more than one contributing source, so the counts below do not
+sum to the number of places. Measured over the Italy extract (3,044,552 places in the
+release), counting cited source records:
+
+  Contributing dataset   Licence                 Source records
+  ---------------------  ----------------------  --------------
+  Overture               CDLA-Permissive-2.0          3,044,552
+  Meta                   CDLA-Permissive-2.0          2,530,137
+  Microsoft              CDLA-Permissive-2.0            262,129
+  Foursquare             Apache-2.0                     157,262
+  AllThePlaces           CC0-1.0                         87,122
+  PinMeTo                CDLA-Permissive-2.0              7,448
+  DAC                    CDLA-Permissive-2.0                453
+  Overture-signals       CDLA-Permissive-2.0                  3
+  Krick                  CDLA-Permissive-2.0                  1
+
+
+What was changed for bundling
+-----------------------------
+
+  - restricted to the 116 categories the application serves;
+  - restricted to records whose coordinates fall inside Italy's national outline;
+  - restricted to records with a non-empty name and a confidence above zero;
+  - coordinates rounded to 1e-5 degrees (~1.1 m);
+  - the confidence score retained as an integer scaled by 1000;
+  - the Overture identifier retained as its 16-byte value;
+  - the free-form address and locality joined into a single display string;
+  - stored in a read-only SQLite table with an R-tree spatial index.
+
+No attribute values are invented, and no place is added. The build is reproducible from the
+released source above with `tools/map-data` in the application's source repository.
+
+
+The database the application installs
+-------------------------------------
+
+Importing the place file writes a database under the operator's own data directory. That
+database is not the file above: the importer also reads the installed map archive and adds
+the place, street and locality names it draws, so that what the map shows and what a search
+finds cannot disagree.
+
+Those added rows are OpenStreetMap-derived and are covered by the ODbL (see
+LICENSE-ODbL-1.0.txt). The resulting database is therefore a Derivative Database under the
+ODbL as well as a collection of Overture records. It stays on the operator's machine and is
+never distributed by the application; an operator who passes it on, or publishes it, must
+comply with both licences — including the ODbL share-alike obligation.
+
+
+Attribution displayed in the application
+----------------------------------------
+
+The map displays, as a line of its own:
+
+  Places data © Overture Maps Foundation (overturemaps.org) — CDLA-Permissive-2.0 / Apache-2.0
+
+The string is defined once in packages/map/src/style/attribution.ts.

@@ -1,0 +1,51 @@
+Undaergo — routing data NOTICE
+==============================
+
+The routing archive distributed beside the installer, `routing-italy-3.9.0.tar.gz`, holds a
+routing graph and the engine's command-line tools. The operator imports it from the Data
+panel; the graph is not inside the installer.
+
+  1. A routing graph tiled by Valhalla from a Geofabrik OpenStreetMap extract of Italy.
+  2. The compiled Valhalla tools, redistributed with the application as well.
+
+Engine
+------
+
+  Project:  Valhalla
+  Version:  3.9.0
+  Licence:  MIT
+  Source:   https://github.com/valhalla/valhalla
+  Binaries: unpacked from the "pyvalhalla" distribution published by the project on PyPI.
+            Only the compiled executables and their shared libraries are redistributed; no
+            Python code is included.
+
+  Licence file: LICENSE-Valhalla-MIT.txt
+
+The engine loads third-party shared libraries, each under its own licence. They are listed,
+with their copyright notices and upstream addresses, in NOTICE-bundle.txt, which must travel
+with this notice.
+
+Routing graph
+-------------
+
+  Publisher: OpenStreetMap contributors
+  Extract:   Geofabrik regional extract of Italy
+  Licence:   Open Database License, version 1.0 (ODbL 1.0)
+  Copyright: © OpenStreetMap contributors
+             https://www.openstreetmap.org/copyright
+
+  Licence file: LICENSE-ODbL-1.0.txt
+
+The graph is a Derivative Database of OpenStreetMap data under the ODbL, so the attribution
+obligation is in force at the moment of shipping, not on use. The credit is carried on the map
+itself, declared on the "italy" source in the application's map style and shown as
+"© OpenStreetMap contributors" — the same string the basemap displays, because both derive
+from OpenStreetMap.
+
+The ODbL requires that anyone receiving the graph also receives the licence: the text is in
+this folder as LICENSE-ODbL-1.0.txt, and the operator may redistribute the graph only under
+that licence.
+
+The exact extract, its digest, the engine version and the tile counts that shipped are
+recorded in PROVENANCE.json inside the archive. Read the numbers from that file rather than
+restating them here.
