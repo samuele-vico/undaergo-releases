@@ -1,0 +1,136 @@
+# Undaergo — Licence
+
+Copyright © 2026 Samuele Vico. All rights reserved.
+
+Undaergo is proprietary software. Its source code is not distributed. This licence governs the
+installer, the executable, the application's own code and assets (together, the "Application") and the
+documentation in this repository. It does not govern the map, place and routing data files, which are
+separate works under their own licences (section 3), nor the third-party components listed in
+`THIRD-PARTY-NOTICES.md` (section 4).
+
+By downloading, installing or using the Application you accept this licence. If you do not accept it,
+do not install or use the Application.
+
+## 1. Grant of licence
+
+Subject to this licence, you may, free of charge:
+
+a. download the installer from the official release page;
+b. install and run the Application on computers that you own or control, for your own personal use or
+   for the internal business purposes of the organisation you work for, including commercial use by a
+   group-travel operator;
+c. share the unmodified installer within your organisation for installation and use under this
+   licence;
+d. make a reasonable number of backup copies of the installer;
+e. read, copy and share the Markdown documentation in this repository in unmodified form for the
+   purpose of using the Application.
+
+No other rights are granted, whether by implication, estoppel or otherwise. The documentation may not
+be sold, relicensed or presented as your own work.
+
+## 2. Conditions and restrictions
+
+You may not:
+
+a. sell, rent, lease, lend, sublicense, publish or otherwise redistribute the Application, in whole or
+   in part, outside the internal sharing permitted by section 1(c);
+b. make the Application available to third parties as a hosted or managed service, or bundle it with
+   another product or service without prior written permission;
+c. modify, adapt, translate, decompile, disassemble or reverse engineer the Application, or attempt to
+   derive its source code, except to the extent that applicable law expressly permits despite this
+   restriction;
+d. remove, alter or obscure any copyright, licence, attribution or proprietary notice in the
+   Application;
+e. use the "Undaergo" name or logo in a way that suggests endorsement, partnership or origin other
+   than factual reference to this product.
+
+An update replaces the Application and is governed by the licence supplied with that update. If an
+update is accompanied by different terms, those terms apply from installation of the update.
+
+## 3. Data files
+
+The Application ships without data. The map, place and routing files distributed with a release are
+separate works, are not part of the Application, and are not licensed to you under section 1.
+
+- **Map archive (`italy.pmtiles`)** — a Protomaps build derived from OpenStreetMap. It is made
+  available under the **Open Database License, version 1.0 (ODbL 1.0)**, and contains information from
+  OpenStreetMap, © OpenStreetMap contributors
+  (<https://www.openstreetmap.org/copyright>). It is a Derivative Database under the ODbL.
+- **Place database (`poi-overture.sqlite`)** — place records from the Overture Maps Foundation
+  "places" theme, made available under the **Community Data License Agreement — Permissive, version
+  2.0 (CDLA-Permissive-2.0)**, with contributions under the **Apache License 2.0** (Foursquare) and
+  **CC0 1.0** (AllThePlaces). The Apache-2.0 NOTICE must be retained.
+- **Routing archive (`routing-*.tar.gz`)** — a routing graph tiled by Valhalla from a Geofabrik
+  OpenStreetMap extract of Italy. It is made available under the **ODbL 1.0** and contains information
+  from OpenStreetMap, © OpenStreetMap contributors. The archive also contains the Valhalla engine,
+  which is licensed under the **MIT License** (see section 4).
+
+If you use or redistribute a data file, you must comply with its licence, including attribution and,
+for the ODbL, the share-alike obligation: a Derivative Database that you publicly use or redistribute
+must be offered under the ODbL 1.0. The attribution "© OpenStreetMap contributors" is displayed by the
+Application on the map and must not be removed from a redistribution of the map or routing data.
+When you pass a data file on to another person, include `THIRD-PARTY-NOTICES.md` and the `licenses/`
+directory with it.
+
+Nothing in this licence restricts, limits or imposes additional conditions on the rights granted to
+you by the data licences. Where this licence conflicts with a data licence in relation to a data file,
+the data licence prevails for that file. The full texts are in `licenses/`, and the sources and
+modifications are recorded in `THIRD-PARTY-NOTICES.md`.
+
+## 4. Third-party components
+
+The Application includes third-party software and assets, including Electron and Chromium, React,
+Zustand, TanStack Query, MapLibre GL JS, PMTiles, Lucide icons, the Valhalla routing engine and its
+bundled shared libraries, SQLite and the Noto Sans font. The map style follows the visual design of
+OpenFreeMap's Liberty style. Each remains governed by its own licence and copyright notices, which are
+set out in `THIRD-PARTY-NOTICES.md` and in the `licenses/` directory. Where a third-party licence grants
+you broader rights than this licence, that licence prevails for the component it covers. Nothing in
+this licence grants you rights to a third-party trademark.
+
+## 5. No warranty
+
+The Application is provided "as is" and "as available", without warranty of any kind, whether express,
+implied or statutory, including any warranty of merchantability, fitness for a particular purpose,
+accuracy, completeness, quiet enjoyment or non-infringement. No warranty is given that the Application
+will be uninterrupted, error-free or free of harmful components, or that routes, distances, durations,
+place records or other calculated or imported information are correct. You are responsible for
+verifying any output before relying on it. The data files are provided under their own licences, which
+contain their own disclaimers.
+
+Nothing in this section excludes or limits a warranty or right that cannot be excluded or limited
+under applicable law, including mandatory consumer rights where they apply.
+
+## 6. Limitation of liability
+
+To the maximum extent permitted by law, the copyright holder is not liable for any indirect,
+incidental, special, consequential or punitive damages, or for any loss of profits, revenue, data,
+business or goodwill, arising out of or in connection with the Application or the data files, however
+caused and regardless of the theory of liability. The total aggregate liability of the copyright
+holder for all claims relating to the Application or the data files will not exceed the amount you
+paid for them, if any.
+
+Nothing in this section excludes or limits liability for fraud, wilful misconduct, death or personal
+injury caused by negligence, or any other liability that cannot be excluded or limited under
+applicable law.
+
+## 7. Termination
+
+This licence terminates automatically if you breach any of its terms. On termination you must stop
+using the Application and delete all copies you hold. Sections 3 to 9 survive termination. Rights in
+the data files granted by their own licences are not terminated by a breach of this licence.
+
+## 8. Governing law and jurisdiction
+
+This licence is governed by the laws of Italy, without regard to conflict-of-laws rules. The courts of
+Italy have jurisdiction over any dispute arising out of or in connection with this licence, without
+prejudice to any mandatory rule that gives a consumer the right to bring proceedings in the courts of
+their place of residence.
+
+## 9. General
+
+If any provision of this licence is held invalid or unenforceable, the remaining provisions remain in
+full force and effect. Failure to enforce a provision is not a waiver of it. This licence, together
+with the notices and licence texts it refers to, is the entire agreement between you and the copyright
+holder concerning the Application.
+
+Questions about this licence: <https://github.com/samuele-vico/undaergo-releases/issues>.
