@@ -58,13 +58,18 @@ cancelled, and the panel can be closed while it continues. Reopen `Data` to see 
 
 ## Records
 
-`Records` lists every place you have corrected or created.
+`Records` lists every place you have corrected, created or blocked.
 
-- The field filters by name, town, address or category.
-- `Restore` on an edit returns the place to the dataset's values.
-- `Delete` on a creation removes the place you created.
-- The confirmation states what will happen. The action is refused, with the reason, while a saved
-  composition, a preset or a route still depends on the place.
+- The field filters by name, town, address or category, never by a contact detail. The `Edited`,
+  `Created` and `Blocked` checkboxes narrow by kind and combine with it.
+- `Restore` on an edit returns the place to the dataset's values; `Delete` on a creation removes it.
+- `Restore` on a block brings the place back and is never refused.
+- An edit or a creation is refused, with the reason, while a saved composition, a preset or a route
+  depends on the place.
+
+All three survive a map or place-data replacement. Blocking is reached only from a place's `Edit` form
+and is never marked on the map; see
+[Places, selection and routes](places-and-routes.md#blocking-a-place).
 
 ## Settings
 
@@ -92,6 +97,7 @@ Everything the operator owns is under `%APPDATA%\Undaergo`:
 
 - the database with trips, templates, presets, services and place records;
 - the settings file;
+- the record of Word templates you have already trusted, so an export does not ask again;
 - the imported map, place database and routing graph under `data\`.
 
 The installer, an update and the uninstaller do not touch this folder. Deleting it manually resets the

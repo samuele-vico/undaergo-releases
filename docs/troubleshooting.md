@@ -28,6 +28,7 @@ guesses.
 - Zoom in. A view larger than one search is refused with `Zoom in to load places.`
 - Lower `Minimum confidence` in `Settings`; records below the threshold are not shown.
 - If no place data is installed, `Data` says so.
+- The place may be blocked: nothing on the map marks a block. Look for a `Blocked` entry in `Records`.
 
 ## A search answers nothing
 
@@ -35,6 +36,27 @@ guesses.
 - At least one search chip must be on.
 - If a search area is drawn, results are limited to it. Remove the polygon and search again.
 - A comma restricts the rest of the query to one town: `via roma, firenze`.
+- A blocked place never answers. Restore it from `Records` and search again.
+
+## The Block control is unavailable
+
+`Block` needs the place to be in no preset and on no day of a saved composition. Remove it from those,
+save, then block it from the place's `Edit` form. A plan link alone does not prevent a block.
+
+## A blocked place does not come back after Restore
+
+`Restore` forgets the block; the place reappears only if the installed place data or a correction of
+yours still describes it. Otherwise the entry can be restored but there is nothing left to draw.
+
+## Export to Word
+
+- **Missing entry** — only a trip has one: `Trips` → row's vertical-ellipsis button.
+- **`No Word templates`** — put a `.docx` directly in `<installation folder>\resources\word-templates`
+  and reopen the window. The folder is named in full; writing to it may need administrator rights.
+- **Trust question** — the template's commands run as code. `Export anyway` remembers that exact file
+  content; editing the file asks again.
+- **Export fails** — usually the template names something the document does not carry. The window keeps
+  the chosen template; fix the file against `GUIDE.md` and try again. Nothing is written on failure.
 
 ## Route calculation is unavailable
 
@@ -60,9 +82,9 @@ files came in can be deleted; it takes about 4.6 GiB. See
 ## I need to start over
 
 First back up `%APPDATA%\Undaergo` if you may want the data later. Deleting that folder resets the
-application: it removes trips, templates, presets, services, place records, preferences and every
-imported dataset. Deleting only `%APPDATA%\Undaergo\data` removes the imported datasets and keeps the
-operator database.
+application: it removes trips, templates, presets, services, place records, preferences, the trusted
+Word template record and every imported dataset. Deleting only `%APPDATA%\Undaergo\data` removes the
+imported datasets and keeps the operator database.
 
 ## Reporting a problem
 

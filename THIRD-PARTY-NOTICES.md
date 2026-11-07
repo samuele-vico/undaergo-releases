@@ -21,6 +21,9 @@ authoritative record and it travels with the product.
 | MapLibre GL JS | 6.9.0 | BSD-3-Clause |
 | PMTiles | 4.5.0 | BSD-3-Clause |
 | Lucide React | 1.46.0 | ISC |
+| docx-templates | 4.15.0 | MIT |
+| JSZip | 3.10.2 | MIT |
+| sax | 1.3.0 | ISC |
 | Valhalla routing engine | 3.9.0 | MIT |
 | Valhalla's bundled libraries (27 DLLs) | with 3.9.0 | LGPL-2.1, MPL-2.0, Apache-2.0, MIT, BSD, ISC, zlib, IJG |
 | Noto Sans Regular and Medium (map glyphs) | subset | SIL Open Font License 1.1 |

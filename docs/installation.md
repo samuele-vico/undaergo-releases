@@ -82,17 +82,28 @@ The previous place dataset is kept on disk so that `Revert` stays available, so 
 holds two of them. The map and routing replacements keep no previous copy, but a routing import needs
 room for the old and the new network at the same time.
 
+## Word templates
+
+`<installation folder>\resources\word-templates` holds a sample `.docx` and `GUIDE.md`, and is what
+`Export to Word` reads. Copy your own `.docx` files there — only files directly in the folder are
+listed. Writing may need administrator rights, and an update may replace what you added; keep your own
+copies. Never add a template you do not trust: its commands run as code.
+
+See [Exporting a trip to Word](templates-trips-and-presets.md#exporting-a-trip-to-word).
+
 ## Update the application
 
 Run a newer installer over the existing installation. It replaces the application and its routing
-engine and leaves the operator database and the imported datasets untouched. The same is true of the
-uninstaller: it removes the application, not your data.
+engine and leaves the operator database and the imported datasets untouched. Files you added to the
+installation's `word-templates` folder may be replaced; keep your own copies elsewhere. The same is
+true of the uninstaller: it removes the application, not your data.
 
 ## Uninstall
 
 Use **Settings → Apps → Installed apps → Undaergo → Uninstall**. The operator database, preferences and
 imported datasets remain in `%APPDATA%\Undaergo`. To remove them too, delete that folder after
-uninstalling; this also deletes your trips, templates, presets and place records.
+uninstalling; this also deletes your trips, templates, presets and place records. Uninstalling removes
+the application folder, including the `word-templates` folder and any template you added there.
 
 ## Verify the files you received
 

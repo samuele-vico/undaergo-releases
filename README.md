@@ -1,6 +1,6 @@
 # Undaergo
 
-Undaergo is a Windows desktop application for group-travel operators: it draws an offline vector map of Italy, searches places, streets and businesses, discovers places and lodgings from the current map view, calculates car, walking, bicycle and bus routes, and composes reusable templates and dated trips day by day with places, services and saved routes. The application ships without data: the map, place database and routing network are supplied separately and imported from the `Data` panel; search, discovery and routing remain unavailable until the corresponding file has been imported.
+Undaergo is a Windows desktop application for group-travel operators: it draws an offline vector map of Italy, searches places, streets and businesses, discovers places and lodgings from the current map view, calculates car, walking, bicycle and bus routes, and composes reusable templates and dated trips day by day with places, services and saved routes. Places you never want to see can be blocked and restored from the `Records` panel, and a trip can be exported as a Word document through the templates supplied with the installation or added by you. The application ships without data: the map, place database and routing network are supplied separately and imported from the `Data` panel; search, discovery and routing remain unavailable until the corresponding file has been imported.
 
 ## Install
 

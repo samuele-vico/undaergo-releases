@@ -63,6 +63,8 @@ drink, outdoors, culture, places of worship, public transport, fuel / parking an
 - Put a comma after the phrase to restrict the search to one town: `via roma, firenze`.
 - Choosing a street, town, region, district or water moves the camera to it.
 - Choosing a categorised place also adds it to `Selected places`.
+- A place you have blocked is never answered: not listed, nothing it holds matches. Restoring it on the
+  `Records` panel makes it answer again.
 - `Escape` closes the search and clears the query.
 
 ### Searching inside a drawn area
@@ -95,6 +97,9 @@ zooming asks for the newly visible area. A view too large for one search is refu
 `Zoom in to load places.` rather than searched in part.
 
 - Switching a category off removes its places at once.
+- A place you have blocked is never drawn, counted or answered, under any category or chip. Nothing
+  marks its absence; the area simply reads as though the place were not in the data. See
+  [Records](places-and-routes.md#records).
 - Places that would overlap are shown as a badge with a count; press it to zoom in until they separate.
 - The `Minimum confidence` setting decides which records are shown. Lowering it includes less certain
   records; see [Data, records and settings](data-records-settings.md).
@@ -111,6 +116,11 @@ Pointing at or pressing a place opens one popup with four tabs:
 The `Select` pin adds the place to `Selected places`. On a categorised place, the `Edit` pencil opens
 the place form and saves your own version of its name, category, address and contacts. A corrected
 place reads as your version everywhere; taking the correction back is done from the `Records` panel.
+
+The edit form also carries `Block`, which hides the place from the map and the search without deleting
+anything; its `Selected places` row and every route ending on it go too. A block is refused while a
+preset contains the place or a saved composition places it on a day, is never marked on the map, and is
+taken back from the `Records` panel. See [Records](places-and-routes.md#records).
 
 The map's credits line is always visible and names the place-data provider, MapLibre and the
 OpenStreetMap contributors separately.

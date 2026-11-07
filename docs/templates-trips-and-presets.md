@@ -37,7 +37,8 @@ them are removed.
 - A row's pin puts its places on the map: they replace `Selected places` and the camera fits them. For
   a template or trip, its saved composition routes are drawn too. A place the current data no longer
   resolves is left out.
-- The vertical-ellipsis button opens the row's actions.
+- The vertical-ellipsis button opens the row's actions: `Edit`, `Composition`, `Export to Word`,
+  `Delete` — a template's menu lacks the export.
 
 ## Composing a plan
 
@@ -69,6 +70,27 @@ public holidays and Sundays in red and Saturdays in a softer red.
 
 Unlinking a place is possible from the composition only while no day holds an instance of it; the
 control asks first. A place held by a saved composition cannot be unlinked from a place popup either.
+
+## Exporting a trip to Word
+
+Only a trip has an export.
+
+1. Row actions → `Export to Word`. The document describes the **saved** composition, not unsaved edits.
+2. Choose a template. The dropdown lists the `.docx` files in `<installation folder>\resources\word-templates`
+   by name, A→Z, first chosen; the folder is read on each opening. `.docm`, `.dotx` and subfolders are
+   ignored. With none, the window says `No Word templates` and names the folder.
+3. A template whose commands are new to the application asks first: they run as code, so continue only
+   if you trust the file. `Export anyway` remembers that exact content — an edited file asks again.
+4. `Export` opens a Save dialog suggesting `<trip name>.docx`, then writes one document: commands
+   replaced by the trip's data, styles, headers, footers, images and tables kept as authored. A failure
+   keeps the window and the chosen template open; nothing is written.
+
+The document carries the trip's fields, every day with its places in walking order, category and
+services, every leg, and the tallies by service, category and mode. Dates are ISO unless the template
+formats them. An export changes nothing else.
+
+The installation ships a sample template and `GUIDE.md`. Adding a template needs write access to the
+installation folder, and an update may replace it — keep your own copy elsewhere.
 
 ## Presets
 
