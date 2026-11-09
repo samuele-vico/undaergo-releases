@@ -97,6 +97,7 @@ Everything the operator owns is under `%APPDATA%\Undaergo`:
 
 - the database with trips, templates, presets, services and place records;
 - the settings file;
+- the `word-templates` folder with your Word templates, created on the first export;
 - the record of Word templates you have already trusted, so an export does not ask again;
 - the imported map, place database and routing graph under `data\`.
 

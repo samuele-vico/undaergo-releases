@@ -8,7 +8,8 @@
 - **Right:** the layers rail, collapsed to icons until you expand it. It holds the basemap overlays and
   the place-category switches.
 - **Top:** the search button and the search-area polygon button.
-- **Bottom:** the toolbar: `Data`, `Records`, `Services`, `Settings`.
+- **Bottom:** the toolbar: the `Licence` key at the far left, separated from `Data`, `Records`,
+  `Services` and `Settings`.
 - **Over the map:** `Selected places`, the `Routes` list and the panels opened from the toolbar or a
   plan.
 

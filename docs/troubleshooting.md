@@ -48,11 +48,19 @@ save, then block it from the place's `Edit` form. A plan link alone does not pre
 `Restore` forgets the block; the place reappears only if the installed place data or a correction of
 yours still describes it. Otherwise the entry can be restored but there is nothing left to draw.
 
+## A PRO feature is locked
+
+`Export to Word` and `Assign shortest routes` are PRO features. While no PRO licence is active they
+wear a crown, and pressing one opens the `Licence` window instead of running. Enter the key from your
+supplier there. A licence that has lapsed shows `Licence expired`: open `Licence` and press `Retry`,
+which renews it from the computer's own record without re-entering the key. Nothing else is restricted.
+
 ## Export to Word
 
 - **Missing entry** — only a trip has one: `Trips` → row's vertical-ellipsis button.
-- **`No Word templates`** — put a `.docx` directly in `<installation folder>\resources\word-templates`
-  and reopen the window. The folder is named in full; writing to it may need administrator rights.
+- **`No Word templates`** — put a `.docx` directly in `%APPDATA%\Undaergo\word-templates` and reopen
+  the window. The window creates that folder with a sample template on its first opening; no
+  administrator rights are needed.
 - **Trust question** — the template's commands run as code. `Export anyway` remembers that exact file
   content; editing the file asks again.
 - **Export fails** — usually the template names something the document does not carry. The window keeps
@@ -63,6 +71,7 @@ yours still describes it. Otherwise the entry can be restored but there is nothi
 - The dialog says `No road network is available` when no routing graph is installed. Import
   `routing-*.tar.gz` from `Data`.
 - The composition's mode picker offers only `Unspecified` for the same reason.
+- `Assign shortest routes` needs at least one segment with a transport mode: choose one first.
 - An archive built for a different engine version is refused by name. Use the archive supplied with
   this release of the application.
 
@@ -82,9 +91,9 @@ files came in can be deleted; it takes about 4.6 GiB. See
 ## I need to start over
 
 First back up `%APPDATA%\Undaergo` if you may want the data later. Deleting that folder resets the
-application: it removes trips, templates, presets, services, place records, preferences, the trusted
-Word template record and every imported dataset. Deleting only `%APPDATA%\Undaergo\data` removes the
-imported datasets and keeps the operator database.
+application: it removes trips, templates, presets, services, place records, preferences, your Word
+templates and the trusted-template record, the licence, and every imported dataset. Deleting only
+`%APPDATA%\Undaergo\data` removes the imported datasets and keeps the operator database.
 
 ## Reporting a problem
 

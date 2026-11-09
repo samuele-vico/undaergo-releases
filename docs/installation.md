@@ -84,26 +84,37 @@ room for the old and the new network at the same time.
 
 ## Word templates
 
-`<installation folder>\resources\word-templates` holds a sample `.docx` and `GUIDE.md`, and is what
-`Export to Word` reads. Copy your own `.docx` files there — only files directly in the folder are
-listed. Writing may need administrator rights, and an update may replace what you added; keep your own
-copies. Never add a template you do not trust: its commands run as code.
+`Export to Word` reads `%APPDATA%\Undaergo\word-templates`. The export window creates the folder the
+first time it opens and copies the sample `.docx` and `GUIDE.md` into it. Copy your own `.docx` files
+there — only files directly in the folder are listed. It needs no administrator rights, and the
+installer, an update and the uninstaller never touch it, so your templates stay. Never add a template
+you do not trust: its commands run as code.
 
-See [Exporting a trip to Word](templates-trips-and-presets.md#exporting-a-trip-to-word).
+See [Exporting a trip to Word](templates-trips-and-presets.md#exporting-a-trip-to-word). `Export to Word`
+is a PRO feature: see [Licence](#licence).
 
 ## Update the application
 
 Run a newer installer over the existing installation. It replaces the application and its routing
-engine and leaves the operator database and the imported datasets untouched. Files you added to the
-installation's `word-templates` folder may be replaced; keep your own copies elsewhere. The same is
-true of the uninstaller: it removes the application, not your data.
+engine and leaves the operator database and the imported datasets untouched. Your Word templates live
+under `%APPDATA%` and are kept as they are. The same is true of the uninstaller: it removes the
+application, not your data.
 
 ## Uninstall
 
-Use **Settings → Apps → Installed apps → Undaergo → Uninstall**. The operator database, preferences and
-imported datasets remain in `%APPDATA%\Undaergo`. To remove them too, delete that folder after
-uninstalling; this also deletes your trips, templates, presets and place records. Uninstalling removes
-the application folder, including the `word-templates` folder and any template you added there.
+Use **Settings → Apps → Installed apps → Undaergo → Uninstall**. The operator database, preferences,
+Word templates and imported datasets remain in `%APPDATA%\Undaergo`. To remove them too, delete that
+folder after uninstalling; this also deletes your trips, templates, presets and place records.
+Uninstalling removes the application folder only.
+
+## Licence
+
+The application is proprietary and works without a licence, except for its two PRO features:
+`Export to Word` and `Assign shortest routes`. Both wear a crown while no PRO licence is active, and
+pressing one opens the `Licence` window. Enter the key from your supplier once; the heading then reads
+`PRO licence active` and `Valid until <date>`. A lapsed licence reconnects and renews from the computer's
+own record — open `Licence` and press `Retry`. Nothing you have entered, drawn or exported is taken
+away by a licence state.
 
 ## Verify the files you received
 

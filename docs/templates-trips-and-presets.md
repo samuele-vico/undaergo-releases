@@ -19,8 +19,8 @@ Use `List actions` on the sidebar tab bar:
 - **New template** — asks for `Name`, `Description` and `Days`.
 - **New trip** — asks for `Name`, `Description`, an optional template, `Days`, `Start Date` and
   `Participants`. Choosing a template fills `Days` from it, copies its places, composition, services
-  and saved routes, and locks the day count. The end date is derived from the start date and the day
-  count.
+  (on places and on days) and saved routes, and locks the day count. The end date is derived from the
+  start date and the day count.
 - **New preset** — asks only for a name.
 
 Names are trimmed and must be unique within their kind; `Rome` and `rome` are the same name, and so
@@ -57,12 +57,18 @@ left and the plan's days on the right.
 4. **Choose a transport mode for every gap.** Press the segment between two adjacent instances and
    choose `Car`, `Walking`, `Bicycle`, `Bus`, or `Unspecified`. With no routing data only `Unspecified`
    is offered.
-5. **Assign services.** Press `+` on a placed occurrence and choose one of your services. The same
-   service on two or more placements of one day is highlighted as a warning; it never blocks a save.
-6. **Define routes.** `Define routes` in the header opens the routing workspace. Press a gap's row to
+5. **Assign services.** Press `+` on a placed occurrence, or on a day's header, and choose one of your
+   services. A day's services belong to the day and not to any place on it. The same service twice in
+   one day — on the day and its places, or on two placements — is highlighted as a warning; it never
+   blocks a save.
+6. **Calculate the shortest routes in one click.** `Assign shortest routes` in the header fills every
+   segment that has a transport mode with the shortest route by distance, in a single run. Choose at
+   least one mode first. It works on unsaved changes; when some segments already hold a route it asks
+   whether to keep those or replace them. **PRO feature.**
+7. **Define routes.** `Define routes` in the header opens the routing workspace. Press a gap's row to
    ask the engine for alternatives, choose one, then `Save and return to the composition`. A route is
    stored on its gap and belongs to the mode it was calculated for; changing the mode hides it.
-7. **Save.** `Save` writes the composition, its services and its routes. Leaving with unsaved changes
+8. **Save.** `Save` writes the composition, its services and its routes. Leaving with unsaved changes
    asks first.
 
 On a template, day headings read `Day 1` … `Day N`. On a trip they read the calendar date, with Italian
@@ -73,11 +79,11 @@ control asks first. A place held by a saved composition cannot be unlinked from 
 
 ## Exporting a trip to Word
 
-Only a trip has an export.
+**PRO feature.** Only a trip has an export; the entry wears a crown while no PRO licence is active.
 
 1. Row actions → `Export to Word`. The document describes the **saved** composition, not unsaved edits.
-2. Choose a template. The dropdown lists the `.docx` files in `<installation folder>\resources\word-templates`
-   by name, A→Z, first chosen; the folder is read on each opening. `.docm`, `.dotx` and subfolders are
+2. Choose a template. The dropdown lists the `.docx` files in `%APPDATA%\Undaergo\word-templates` by
+   name, A→Z, first chosen; the folder is read on each opening. `.docm`, `.dotx` and subfolders are
    ignored. With none, the window says `No Word templates` and names the folder.
 3. A template whose commands are new to the application asks first: they run as code, so continue only
    if you trust the file. `Export anyway` remembers that exact content — an edited file asks again.
@@ -85,12 +91,13 @@ Only a trip has an export.
    replaced by the trip's data, styles, headers, footers, images and tables kept as authored. A failure
    keeps the window and the chosen template open; nothing is written.
 
-The document carries the trip's fields, every day with its places in walking order, category and
-services, every leg, and the tallies by service, category and mode. Dates are ISO unless the template
-formats them. An export changes nothing else.
+The document carries the trip's fields, every day with its own services and its places in walking
+order, each with its category and services, every leg, and the tallies by service, category and mode.
+Dates are ISO unless the template formats them. An export changes nothing else.
 
-The installation ships a sample template and `GUIDE.md`. Adding a template needs write access to the
-installation folder, and an update may replace it — keep your own copy elsewhere.
+The window creates that folder the first time it opens and copies the sample template and `GUIDE.md`
+into it. It is yours: adding, editing or deleting a template needs no administrator rights, and
+installing, updating or uninstalling the application never touches it.
 
 ## Presets
 
@@ -122,5 +129,6 @@ Open `Services` in the toolbar. The panel has two tabs:
   definition. Types cannot be created, renamed or deleted; a new release can add, rename or withdraw
   one without changing the trips that already name a service.
 
-Services are assigned only inside a composition, to a placed occurrence. They are not attached to a
-place or to a plan's link list.
+Services are assigned only inside a composition: to a placed occurrence, or to a whole day. They are
+not attached to a place or to a plan's link list. A service held by a day blocks its deletion exactly
+as one held by a placement does.
