@@ -79,17 +79,23 @@ and is never marked on the map; see
   shows more places, including less certain ones; raising it leaves them out.
 - A preview reports how many places in the current view the value would yield and how far from the
   centre they reach. It counts food and drink and places to stay only.
-- `Save` stores the value. The map uses it immediately; the value survives a restart.
+- `Save` stores the value and reports `Saved`. The map uses it immediately; the value survives a
+  restart.
 
-The panel states the file where the preference is stored.
+### Folders
 
-### Licences
+A `Folders` group carries two buttons:
 
-`Settings` also carries a `Licences` section. `Open the licence folder` opens the directory installed
-beside the application, which holds every third-party notice and licence text: the software the
-application is built on, the libraries the routing engine loads, the map's glyphs and icons, and the
-map, place and routing datasets. `NOTICE-bundle.txt` in that folder names each component and where its
-terms are. See [Third-party notices](../THIRD-PARTY-NOTICES.md).
+- `Open the licence folder` opens the directory installed beside the application, which holds every
+  third-party notice and licence text: the software the application is built on, the libraries the
+  routing engine loads, the map's glyphs and icons, and the map, place and routing datasets.
+  `NOTICE-bundle.txt` in that folder names each component and where its terms are. See
+  [Third-party notices](../THIRD-PARTY-NOTICES.md).
+- `Open the Word templates folder` opens `%APPDATA%\Undaergo\word-templates`. Any `.docx` placed
+  directly in it becomes an option of `Export to Word`, and the `GUIDE.md` beside them describes the
+  fields a template can use. The button creates the folder with the sample template on first use.
+
+At the foot of the panel, a muted line states the installed version as `Undaergo version <version>`.
 
 ## Where your data lives
 
@@ -97,7 +103,8 @@ Everything the operator owns is under `%APPDATA%\Undaergo`:
 
 - the database with trips, templates, presets, services and place records;
 - the settings file;
-- the `word-templates` folder with your Word templates, created on the first export;
+- the `word-templates` folder with your Word templates, created by the first export or by the folder
+  button in `Settings`;
 - the record of Word templates you have already trusted, so an export does not ask again;
 - the imported map, place database and routing graph under `data\`.
 

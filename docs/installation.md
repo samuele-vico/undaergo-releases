@@ -84,11 +84,11 @@ room for the old and the new network at the same time.
 
 ## Word templates
 
-`Export to Word` reads `%APPDATA%\Undaergo\word-templates`. The export window creates the folder the
-first time it opens and copies the sample `.docx` and `GUIDE.md` into it. Copy your own `.docx` files
-there — only files directly in the folder are listed. It needs no administrator rights, and the
-installer, an update and the uninstaller never touch it, so your templates stay. Never add a template
-you do not trust: its commands run as code.
+`Export to Word` reads `%APPDATA%\Undaergo\word-templates`. The first export, or
+`Settings → Folders → Open the Word templates folder`, creates the folder and copies the sample `.docx`
+and `GUIDE.md` into it. Copy your own `.docx` files there — only files directly in the folder are
+listed. It needs no administrator rights, and the installer, an update and the uninstaller never touch
+it, so your templates stay. Never add a template you do not trust: its commands run as code.
 
 See [Exporting a trip to Word](templates-trips-and-presets.md#exporting-a-trip-to-word). `Export to Word`
 is a PRO feature: see [Licence](#licence).
@@ -109,9 +109,10 @@ Uninstalling removes the application folder only.
 
 ## Licence
 
-The application is proprietary and works without a licence, except for its two PRO features:
-`Export to Word` and `Assign shortest routes`. Both wear a crown while no PRO licence is active, and
-pressing one opens the `Licence` window. Enter the key from your supplier once; the heading then reads
+The application is proprietary and works without a licence, except for its PRO features: `Clone` and
+`Export` on a preset, template or trip, the `Import` of `.undaexp` files, `Export to Word`, and `Assign
+shortest routes`. Each wears a crown while no PRO licence is active, and pressing one opens the
+`Licence` window. Enter the key from your supplier once; the heading then reads
 `PRO licence active` and `Valid until <date>`. A lapsed licence reconnects and renews from the computer's
 own record — open `Licence` and press `Retry`. Nothing you have entered, drawn or exported is taken
 away by a licence state.
@@ -130,6 +131,6 @@ it again instead of importing it.
 ## Licences installed with the application
 
 The installation carries every third-party notice and licence text in its `licenses` folder, and
-`Settings → Licences → Open the licence folder` opens it. The map, place and routing files you import
+`Settings → Folders → Open the licence folder` opens it. The map, place and routing files you import
 keep their own licences — the Open Database License 1.0, CDLA-Permissive-2.0 and Apache-2.0 — and are
 not covered by the application licence. See [Third-party notices](../THIRD-PARTY-NOTICES.md).

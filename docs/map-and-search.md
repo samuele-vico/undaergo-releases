@@ -3,7 +3,8 @@
 ## The window
 
 - **Left:** the `Trips`, `Templates` and `Presets` tabs, with `Search the list` and `List actions` on
-  the tab bar. Drag the divider to resize the panel.
+  the tab bar. `List actions` creates a trip, template or preset and opens the `Import` of `.undaexp`
+  files. Drag the divider to resize the panel.
 - **Centre:** the map. A place popup opens on it when you point at or select a place.
 - **Right:** the layers rail, collapsed to icons until you expand it. It holds the basemap overlays and
   the place-category switches.

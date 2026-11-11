@@ -30,6 +30,16 @@ For a template or trip, `Edit` on a row opens a panel with the same fields. Savi
 the last day that holds a place asks first, because the days above the new count and everything on
 them are removed.
 
+## Cloning one
+
+**PRO feature.** `Clone` in a row's actions opens a window titled `Clone preset`, `Clone template` or
+`Clone trip`, with `Name` prefilled as `Copy of <name>`.
+
+The copy is exact: every linked place, and for a template or trip the whole composition — placements,
+services on places and days, transport modes and saved routes; a trip also keeps its dates, status,
+participants and source template. Only the name and the new identifier differ. `Cancel`, `Escape` and a
+press outside the window close it and create nothing; a name already in use is refused.
+
 ## The sidebar lists
 
 - `Trips`, `Templates` and `Presets` each list their rows alphabetically, ignoring case and accents.
@@ -37,17 +47,20 @@ them are removed.
 - A row's pin puts its places on the map: they replace `Selected places` and the camera fits them. For
   a template or trip, its saved composition routes are drawn too. A place the current data no longer
   resolves is left out.
-- The vertical-ellipsis button opens the row's actions: `Edit`, `Composition`, `Export to Word`,
-  `Delete` — a template's menu lacks the export.
+- The vertical-ellipsis button opens the row's actions. A trip lists `Edit`, `Composition`, `Clone`,
+  `Export`, `Export to Word`, `Delete`; a template lists the same without `Export to Word`; a preset
+  lists `Edit`, `Clone`, `Export`, `Delete`. `Clone` and `Export` are PRO features and wear a crown
+  while no licence is active; `Export` writes a `.undaexp` file, while `Export to Word` writes a
+  document. See [Exporting and importing files](export-and-import.md).
 
 ## Composing a plan
 
 Open `Composition` from a row's actions. The workspace replaces the map and shows linked places on the
 left and the plan's days on the right.
 
-1. **Link places.** Use the `Trips`, `Templates` or `Presets` tab of a place popup, or import a preset
-   from the composition header. Importing a preset links its places in one action; the links survive
-   `Discard changes` and create no placement.
+1. **Link places.** Use the `Trips`, `Templates` or `Presets` tab of a place popup, or add a preset's
+   places from the composition header. Adding a preset links its places in one action; the links
+   survive `Discard changes` and create no placement.
 2. **Place a linked place.** Drag its box into a day. Dropping on a day's empty area appends it; drop
    at a position to insert it. A place can be placed on several days, but not twice in neighbouring
    slots of the same day. The end of one day and the start of the next are allowed, so a hotel can be
@@ -79,12 +92,14 @@ control asks first. A place held by a saved composition cannot be unlinked from 
 
 ## Exporting a trip to Word
 
-**PRO feature.** Only a trip has an export; the entry wears a crown while no PRO licence is active.
+**PRO feature.** Only a trip has a Word export; the entry wears a crown while no PRO licence is
+active. It is a different entry from `Export`, which writes a `.undaexp` data file.
 
 1. Row actions → `Export to Word`. The document describes the **saved** composition, not unsaved edits.
 2. Choose a template. The dropdown lists the `.docx` files in `%APPDATA%\Undaergo\word-templates` by
    name, A→Z, first chosen; the folder is read on each opening. `.docm`, `.dotx` and subfolders are
    ignored. With none, the window says `No Word templates` and names the folder.
+   `Settings → Folders → Open the Word templates folder` opens that folder directly.
 3. A template whose commands are new to the application asks first: they run as code, so continue only
    if you trust the file. `Export anyway` remembers that exact content — an edited file asks again.
 4. `Export` opens a Save dialog suggesting `<trip name>.docx`, then writes one document: commands
@@ -95,9 +110,10 @@ The document carries the trip's fields, every day with its own services and its 
 order, each with its category and services, every leg, and the tallies by service, category and mode.
 Dates are ISO unless the template formats them. An export changes nothing else.
 
-The window creates that folder the first time it opens and copies the sample template and `GUIDE.md`
-into it. It is yours: adding, editing or deleting a template needs no administrator rights, and
-installing, updating or uninstalling the application never touches it.
+The export window, or `Settings → Folders → Open the Word templates folder`, creates that folder with
+the sample template and `GUIDE.md` on first use. It is yours: adding, editing or deleting a template
+needs no administrator rights, and installing, updating or uninstalling the application never touches
+it.
 
 ## Presets
 
@@ -106,6 +122,7 @@ A preset is a named shortlist of places for repeated use.
 - Create one with `List actions → New preset`.
 - `Show on the map` (the row's pin) puts its places into `Selected places` and fits the camera.
 - `Edit` opens the preset's detail: rename it, review its places and remove one at a time.
+- `Clone` and `Export` copy it, inside the application or to a `<name>.undaexp` file; both are PRO.
 - `Delete` removes the preset and its links; the places themselves are untouched.
 - A place that the current data no longer holds stays in the preset, marked
   `No longer in the place data`, until you remove it.

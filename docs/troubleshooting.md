@@ -50,17 +50,44 @@ yours still describes it. Otherwise the entry can be restored but there is nothi
 
 ## A PRO feature is locked
 
-`Export to Word` and `Assign shortest routes` are PRO features. While no PRO licence is active they
-wear a crown, and pressing one opens the `Licence` window instead of running. Enter the key from your
-supplier there. A licence that has lapsed shows `Licence expired`: open `Licence` and press `Retry`,
-which renews it from the computer's own record without re-entering the key. Nothing else is restricted.
+`Clone` and `Export` on a preset, template or trip, the `Import` of `.undaexp` files, `Export to Word`
+and `Assign shortest routes` are PRO features. While no PRO licence is active they wear a crown, and
+pressing one opens the `Licence` window instead of running. Enter the key from your supplier there. A
+licence that has lapsed shows `Licence expired`: open `Licence` and press `Retry`, which renews it from
+the computer's own record without re-entering the key. Nothing else is restricted.
+
+## Clone, Export and Import
+
+- **No `Clone` or `Export` in a row's actions** — both are there for presets, templates and trips. A
+  crown marks them while no PRO licence is active.
+- **`Export` writes no file** — the Save dialog was cancelled, which writes nothing and says nothing.
+  A refusal appears for a few seconds above the list, naming the reason.
+- **`Import` cannot add a file** — a batch holds at most five files of 32 MB each, and a file already
+  in the list is not added twice. `Import` is also refused while a `Data` import is running: finish or
+  cancel it first.
+
+## A `.undaexp` file is refused
+
+The window of step 2 names the reason; the other files of the batch still import. The usual ones:
+
+- **A name is already in use** — the entity is not overwritten on the strength of its name. Rename the
+  existing one, or import a file whose entity has another name.
+- **The file holds an unknown version or more than one entity** — it was not written by this
+  application's `Export`, or was edited by hand.
+- **A place the file describes cannot be recreated** — the file was written by an older version
+  without place details, and this installation's place data does not hold that place.
+- **A trip's end date is before its start date** — fix the file's source and export it again.
+
+A refused file writes nothing; a batch that fails one file keeps the ones already imported. Re-export
+the entity and import a file at a time to find the one that is refused.
 
 ## Export to Word
 
-- **Missing entry** — only a trip has one: `Trips` → row's vertical-ellipsis button.
+- **Missing entry** — only a trip has a Word export: `Trips` → row's vertical-ellipsis button. The
+  plain `Export` entry beside it writes a `.undaexp` data file, not a document.
 - **`No Word templates`** — put a `.docx` directly in `%APPDATA%\Undaergo\word-templates` and reopen
-  the window. The window creates that folder with a sample template on its first opening; no
-  administrator rights are needed.
+  the window; `Settings → Folders → Open the Word templates folder` opens it. The folder is created
+  with a sample template on first use; no administrator rights are needed.
 - **Trust question** — the template's commands run as code. `Export anyway` remembers that exact file
   content; editing the file asks again.
 - **Export fails** — usually the template names something the document does not carry. The window keeps
@@ -100,7 +127,7 @@ templates and the trusted-template record, the licence, and every imported datas
 Open an issue at <https://github.com/samuele-vico/undaergo-releases/issues> and include:
 
 - the application version, as it appears in the installer file name (for example
-  `Undaergo-1.0.1-setup.exe`);
+  `Undaergo-1.0.1-setup.exe`) or at the foot of the `Settings` panel;
 - the names and sizes of the data files you imported;
 - the exact message the application showed;
 - what you did immediately before the problem.
